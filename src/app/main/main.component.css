@@ -1,0 +1,115 @@
+/* Hero Image */
+.camera-hero-img{
+    width: 100%;
+    height: 100vh;
+    background: url(../../assets/camera.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+/* Hero Image LayOver */
+.hero-img-cover{
+    background: linear-gradient(180deg,rgba(0,12,56,.77),rgba(43,46,4,.21));
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* Nav Elements */
+.nav{
+    position: absolute;
+    font-size: 1rem;
+    font-family: cursive;
+    color: #fff;
+}
+
+/* Border-radius = 4px */
+.br-4{
+    border-radius: 4px;
+}
+
+/* Cursor Pointer */
+.cursor{
+    cursor: pointer;
+}
+
+.bg-light-blue{
+    background-color: #F8FDFF;
+}
+
+/* Text in Center */
+.hero-text{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-color: rgba(250, 250, 250, 0.3);
+}
+
+/* Scale Up-Down Animation */
+.scale-anim{
+    animation: scale 3s infinite;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+
+/* Bottom of Hero Image */
+.floating-bottom{
+    position: absolute;
+    top: 64vh;
+    overflow-x: hidden;
+}
+.floating-bottom-image{
+    width: 118%;
+}
+
+/* Card Image and Description */
+.img-wrap {
+    position: relative;
+  }
+  
+  .img-description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .img-wrap:hover .img-description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* show-card */
+  .show-card{
+    background-color: #fff;
+    box-shadow: 0px 1px 20px -11px;
+  }
+
+  /* img-img */
+  .img-img{
+      width: 100%;
+  }

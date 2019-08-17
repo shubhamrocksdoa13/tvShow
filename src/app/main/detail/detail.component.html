@@ -1,0 +1,38 @@
+<div class="close" (click)="goBack()">
+    <i class="fas fa-times"></i>
+</div>
+<div class="col-12 row m-0 ht-100 px-0">
+  <div class="col-6">
+      <div class="detail-text-field">
+          <div class="genre">
+            <span *ngFor="let s of object.genres">
+            {{s}}&nbsp;
+          </span>
+        </div>
+          <div>
+            <h2>{{object.name}}</h2>
+          </div>
+          <div>
+            <p class="described">
+              {{object.summary}}
+            </p>
+          </div>
+          <div class="schedule mt-4">
+            Day: <strong>
+                <span *ngFor="let day of object.schedule.days">
+                    {{day}}&nbsp;
+                  </span>
+            </strong><br>
+            <span>Time: <strong>{{object.schedule.time}}</strong></span>
+          </div>
+          <div>
+            Channel Name: <strong>{{object.network.name}}</strong>
+          </div>
+      </div>
+  </div>
+  <div class="col-6 bg-grey bg-img p-0">
+      <div class="bg-img-cover">
+        <img [src]=object.image.medium alt="image" class="img-img br-4">
+      </div>
+  </div>
+</div>

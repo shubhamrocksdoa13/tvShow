@@ -1,0 +1,48 @@
+<div class="nav col-12 row m-0 py-2">
+    <div class="col-12">
+        <i class="fas fa-tv"></i><span class="px-2">Info TeleVision</span>
+    </div>
+</div>
+<div>
+  <div class="camera-hero-img">
+    <div class="hero-img-cover">
+      <div class="hero-text col-5 p-4 br-4">
+        <h3>Welcome to <i class="fas fa-tv scale-anim"></i> Info TeleVision</h3>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sit est facilis quasi eum atque, natus placeat blanditiis assumenda non fuga consectetur aperiam dolore maxime porro doloribus. Perspiciatis, dolore natus.</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mt-5 pt-5 bg-light-blue">
+  <div class="floating-bottom">
+    <img src="../../assets/Path_223.png" alt="base-image" class="floating-bottom-image">
+  </div>
+  <div class="">
+    <div class="col-12 row m-0">
+      <div class="col-12 text-center">
+        <h3>Select a Show</h3>
+      </div>
+      <div *ngFor="let e of allList; let i = index;" class="col-3 p-2 cursor">
+          <div class="p-5 show-card" (click)="cardDetails(e.id)">
+              <div class="img-wrap">
+                <img class="img-img" [src]=e.show.image.medium />
+                <span class="img-description p-2">
+                  <strong>{{e.show.name}}</strong> 
+                  <br>
+                  <br>
+                  Genre: <span *ngFor="let x of e.show.genres">
+                    <span>{{x}}</span>&nbsp;
+                  </span>
+                  <br> Channel Name: <span>
+                    {{e.show.network.name}}
+                  </span>
+                  <br>Schedule: <span *ngFor="let y of e.show.schedule.days">
+                      <span>{{y}}</span>&nbsp;
+                    </span>
+                </span>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
